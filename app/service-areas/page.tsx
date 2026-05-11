@@ -2,192 +2,211 @@
 
 import { useRef } from "react";
 import { useInView } from "framer-motion";
-
-/* ── Service Area Data ──────────────────────────────────────── */
+import CraftHero from "@/components/custom/craft-catalog/CraftHero";
+import SecondaryButton from "@/components/custom/buttons/SecondaryButton";
 
 const areas = [
   {
+    slug: "manhattan",
+    region: "Manhattan",
+    headline: "Manhattan Electricians — Licensed, Same-Day Service",
+    description:
+      "Manhattan's mix of pre-war walk-ups, high-rises, and new construction means every electrical job comes with its own complications. Our team works in all building types throughout the borough — from knob-and-tube rewires in older apartments to panel upgrades and EV charger installs in newer buildings. We pull permits, pass inspections, and handle Con Edison coordination.",
+    callouts: [
+      "Panel upgrades & 200-amp service",
+      "EV charger installation",
+      "Pre-war building rewires",
+      "24-hour emergency service",
+    ],
+    neighborhoods: [
+      "Upper East Side", "Upper West Side", "Midtown", "Chelsea", "Hell's Kitchen",
+      "Greenwich Village", "East Village", "SoHo", "Tribeca", "Lower Manhattan",
+      "Harlem", "Washington Heights", "Inwood", "Morningside Heights",
+    ],
+  },
+  {
     slug: "brooklyn",
     region: "Brooklyn",
-    headline: "Drain & Sewer Specialists in Brooklyn",
+    headline: "Brooklyn Electricians — All Neighborhoods Covered",
     description:
-      "Brooklyn has some of the oldest plumbing infrastructure in New York — pre-war pipe systems, clay drain lines in brownstones, and cast iron stacks in walk-ups that have been running for 80+ years. Our techs know exactly what to expect when they pull up to a building in Park Slope vs. Bay Ridge, and they arrive with the right equipment the first time.",
+      "Brooklyn's brownstones, row houses, and multi-family buildings are among the most electrically complex in the city. We handle panel upgrades, lighting installs, circuit additions, and full rewires throughout the borough — with proper permits and code-compliant work on every job.",
     callouts: [
-      "Brownstone & pre-war walk-up specialists",
-      "Stack drain issues in multi-family buildings",
-      "Same-day service, all neighborhoods",
+      "Brownstone & row house specialists",
+      "Multi-family building wiring",
+      "GFCI upgrades & new outlets",
+      "Emergency electrical service",
     ],
-    neighborhoods:
-      "Williamsburg • Greenpoint • Bushwick • Bed-Stuy • Crown Heights • Park Slope • Sunset Park • Bay Ridge • Bensonhurst • Dyker Heights • Gravesend • Sheepshead Bay • Coney Island • Flatbush • Canarsie • East New York & More",
+    neighborhoods: [
+      "Williamsburg", "Greenpoint", "Bushwick", "Bed-Stuy", "Crown Heights",
+      "Park Slope", "Prospect Heights", "Fort Greene", "DUMBO", "Brooklyn Heights",
+      "Bay Ridge", "Bensonhurst", "Dyker Heights", "Flatbush", "Sheepshead Bay",
+    ],
   },
   {
     slug: "queens",
     region: "Queens",
-    headline: "Drain & Sewer Specialists in Queens",
+    headline: "Queens Electricians — Residential & Commercial",
     description:
-      "Queens covers one of the widest mixes of home types in the entire city — from single-family houses in Whitestone and Bayside to dense apartment buildings in Astoria and Flushing. Our team handles everything from slow kitchen drains in a LIC condo to main line backups in a multi-unit Jackson Heights walk-up.",
+      "Queens is one of the most diverse boroughs in the city — and its housing stock reflects that. From attached single-family homes in Bayside to large multi-family buildings in Flushing, our licensed electricians handle all electrical work throughout Queens with proper permits and inspections.",
     callouts: [
-      "Single-family homes to large apartment buildings",
-      "Grease line clearing for restaurants & commercial kitchens",
-      "Emergency same-day response across all of Queens",
+      "Single-family & multi-family homes",
+      "EV charger installation",
+      "A/C & heating circuit wiring",
+      "Safety & alarm system installs",
     ],
-    neighborhoods:
-      "Astoria • LIC • Maspeth • Flushing • Whitestone • Bayside • Forest Hills • Rego Park • Jackson Heights • Elmhurst • Middle Village • Ridgewood • Woodside • Sunnyside • Jamaica • Howard Beach & More",
+    neighborhoods: [
+      "Astoria", "Long Island City", "Sunnyside", "Maspeth", "Ridgewood",
+      "Flushing", "Whitestone", "Bayside", "Fresh Meadows", "Jamaica",
+      "Forest Hills", "Rego Park", "Jackson Heights", "Elmhurst", "Middle Village",
+    ],
   },
   {
-    slug: "nassau-county",
-    region: "Nassau County",
-    headline: "Drain & Sewer Specialists in Nassau County",
+    slug: "bronx",
+    region: "The Bronx",
+    headline: "Bronx Electricians — Licensed Electrical Contractors",
     description:
-      "Nassau County homes sit on longer sewer runs than most NYC properties, and mature tree root systems along those lines are one of the leading causes of main line backups. Our technicians understand how Nassau systems are laid out, where clogs typically form, and how to clear them without damaging the pipe.",
+      "The Bronx has a wide range of housing types — large co-op complexes, two-family homes, older apartment buildings — each with its own electrical needs. Our team handles panel upgrades, circuit work, and emergency repairs throughout the Bronx, pulling all required permits and meeting NYC electrical code on every job.",
     callouts: [
-      "Root intrusion specialists for Nassau main lines",
-      "Hydro jetting for long sewer runs",
-      "Local techs — not dispatched from far away",
+      "Panel upgrades & fuse box replacements",
+      "New outlets & circuit additions",
+      "Lighting installation",
+      "24-hour emergency service",
     ],
-    neighborhoods:
-      "Valley Stream • Elmont • Franklin Square • West Hempstead • Hempstead • Garden City • Mineola • New Hyde Park • Floral Park • Rockville Centre • Oceanside • Baldwin • Freeport • Merrick • Bellmore • Wantagh • Seaford • Massapequa • Levittown • East Meadow • Uniondale • Lynbrook • Malverne • Hewlett & More",
+    neighborhoods: [
+      "Riverdale", "Kingsbridge", "Fordham", "Belmont", "Tremont",
+      "Mott Haven", "Hunts Point", "Soundview", "Throgs Neck", "Pelham Bay",
+      "Norwood", "Woodlawn", "Co-op City", "City Island",
+    ],
+  },
+  {
+    slug: "staten-island",
+    region: "Staten Island",
+    headline: "Staten Island Electricians — All Neighborhoods",
+    description:
+      "Staten Island's single-family homes and suburban layout make it one of the more EV charger-friendly boroughs in the city — and one of the most common areas for panel upgrades as residents add home charging and new appliances. We serve the full island with licensed electrical work, same-day scheduling, and proper permits on every job.",
+    callouts: [
+      "EV charger installs & panel upgrades",
+      "Home rewires & circuit additions",
+      "Outdoor & security lighting",
+      "Smoke detector & alarm installs",
+    ],
+    neighborhoods: [
+      "St. George", "New Brighton", "Stapleton", "Bay Ridge", "Tottenville",
+      "Great Kills", "Eltingville", "Annadale", "Richmond Valley", "New Springville",
+      "Westerleigh", "Port Richmond", "Mariners Harbor", "Grasmere",
+    ],
   },
 ];
 
-/* ── Sub-components ─────────────────────────────────────────── */
-
-function AreaSection({ area, reversed }: { area: typeof areas[number]; reversed: boolean }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "0px 0px -60px 0px" });
-  const vis = inView ? " is-visible" : "";
-
+function AreaSection({ area, vis }: { area: typeof areas[number]; vis: string }) {
   return (
     <div
-      ref={ref}
       id={area.slug}
-      className={`content-block-flex flex-module fadeIn wow${vis}`}
-      style={{ borderBottom: "1px solid rgba(0,0,0,0.08)" }}
+      style={{ paddingBottom: "4rem", borderBottom: "1px solid rgba(0,0,0,0.1)", marginBottom: "4rem" }}
     >
-      <div className="inner inner--slim-1172">
-        <div className="content-block-head wide">
-          <h2 className={`h3 fadeInUpS wow${vis}`} style={{ animationDelay: "0.1s" }}>
-            {area.headline}
-          </h2>
-        </div>
-        <div className="content-block-in wide">
-          <div className="content-block-text content-entry p2 full-width">
-            <p>{area.description}</p>
-            <ul>
-              {area.callouts.map((c) => (
-                <li key={c}>{c}</li>
-              ))}
-            </ul>
-            <p>
-              <strong>Neighborhoods served:</strong> {area.neighborhoods}
-            </p>
-            <p>
-              Not sure if we cover your street?{" "}
-              <a href="tel:7187491830" className="ia-link">Call (718) 749-1830</a>{" "}
-              — we almost certainly do.
-            </p>
-          </div>
-        </div>
+      <h2 className={`h3 fadeInUpS wow${vis}`} style={{ marginBottom: "1rem" }}>
+        {area.headline}
+      </h2>
+      <p className={`p2 fadeInUpS wow${vis}`} style={{ animationDelay: "0.05s", marginBottom: "2rem" }}>
+        {area.description}
+      </p>
+
+      <ul
+        className={`fadeInUpS wow${vis}`}
+        style={{ animationDelay: "0.1s", paddingLeft: "1.5rem", marginBottom: "2rem", lineHeight: "2" }}
+      >
+        {area.callouts.map((c) => (
+          <li key={c} style={{ fontSize: "1.5rem" }}>{c}</li>
+        ))}
+      </ul>
+
+      <p className={`p3 ia-medium fadeInUpS wow${vis}`} style={{ animationDelay: "0.15s", marginBottom: "1.5rem" }}>
+        Neighborhoods served:{" "}
+        <span style={{ fontWeight: 400 }}>{area.neighborhoods.join(", ")} and more.</span>
+      </p>
+
+      <div className={`fadeInUpS wow${vis}`} style={{ animationDelay: "0.2s" }}>
+        <a href="tel:6463409882" className="ia-link ia-link--arrow">
+          <i className="icon-arrow-right ia-orange" />
+          <span>Call (646) 340-9882</span>
+        </a>
       </div>
     </div>
   );
 }
 
-/* ── Page ───────────────────────────────────────────────────── */
-
 export default function ServiceAreasPage() {
   const heroRef = useRef<HTMLDivElement>(null);
-  const heroInView = useInView(heroRef, { once: true, margin: "0px 0px -60px 0px" });
+  const contentRef = useRef<HTMLDivElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
+
+  const heroInView = useInView(heroRef, { once: true });
+  const contentInView = useInView(contentRef, { once: true, margin: "0px 0px -60px 0px" });
   const ctaInView = useInView(ctaRef, { once: true, margin: "0px 0px -60px 0px" });
 
-  const heroVis = heroInView ? " is-visible" : "";
+  const vis = contentInView ? " is-visible" : "";
+  const ctaVis = ctaInView ? " is-visible" : "";
 
   return (
     <main className="pt-76 max-[1150px]:pt-[6.2rem]">
 
-      {/* ── Hero ── */}
-      <div ref={heroRef} className={`hero-org flex-module fadeIn wow${heroVis}`}>
-        <div className="hero-org__top ia-bg-dark">
-          <div className="inner inner--slim-1172">
-            <div className={`breadcrumbs ia-sky fadeInUpS wow${heroVis}`}>
-              <span><a href="/">Home</a></span>
-              <em>&gt;</em>
-              <span className="post post-page current-item">Service Areas</span>
-            </div>
-            <h1 className={`ia-white ia-margin-0 fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.1s" }}>
-              We Come to You
-            </h1>
-          </div>
-        </div>
+      <div ref={heroRef}>
+        <CraftHero
+          title="Service Areas"
+          bgImage="https://img1.wsimg.com/isteam/ip/89e3a28a-1623-450e-a04f-089dccc30b1d/fm%3Df_eN91pW.jpg"
+          breadcrumbs={[{ label: "Service Areas" }]}
+        />
+      </div>
 
-        <div className="hero-org__bottom flex-module">
-          <div className="inner inner--slim-1172 cleared">
-            <div className={`hero-org__left wow${heroVis}`}>
-              <div className={`sub-heading fadeInUpS wow${heroVis}`}>Coverage Area</div>
-              <div className={`content-entry fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.1s" }}>
-                <p>
-                  Pipe Monkeys serves all of Brooklyn, Queens, and Nassau County. We don&apos;t
-                  subcontract — our own techs cover every neighborhood, every day, seven days a week.
-                  Same-day scheduling is available across our entire service area.
-                </p>
-              </div>
-            </div>
+      <div ref={contentRef} className={`content-block-flex flex-module fadeIn wow${vis}`}>
+        <div className="inner inner--slim-1172">
 
-            <div className="hero-org__right">
-              <div className={`sub-heading fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.1s" }}>
-                Jump to Area
-              </div>
-              <ul className="quick-links" role="list">
-                {areas.map((area, i) => (
-                  <li key={area.slug} className={`fadeInUpS wow${heroVis}`} style={{ animationDelay: `${0.1 + i * 0.1}s` }}>
-                    <a className="ia-link ia-link--arrow" href={`#${area.slug}`}>
-                      <i className="icon-link" />
-                      <span>{area.region}</span>
-                    </a>
-                  </li>
-                ))}
-                <li className={`fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.4s" }}>
-                  <a className="ia-link ia-link--arrow" href="tel:7187491830">
-                    <i className="icon-link" />
-                    <span>Call (718) 749-1830</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
+          <h1
+            className={`h3 fadeInUpS wow${vis}`}
+            style={{ animationDelay: "0.05s", marginBottom: "0.5rem" }}
+          >
+            Serving All Five NYC Boroughs
+          </h1>
+          <p
+            className={`p2 fadeInUpS wow${vis}`}
+            style={{ animationDelay: "0.1s", marginBottom: "4rem" }}
+          >
+            Licensed residential and commercial electrical work throughout Manhattan,
+            Brooklyn, Queens, the Bronx, and Staten Island. Same-day scheduling available.
+            24-hour emergency service. Call{" "}
+            <a href="tel:6463409882" className="ia-link">(646) 340-9882</a>.
+          </p>
+
+          {areas.map((area) => (
+            <AreaSection key={area.slug} area={area} vis={vis} />
+          ))}
+
         </div>
       </div>
 
-      {/* ── Area Sections ── */}
-      {areas.map((area, i) => (
-        <AreaSection key={area.slug} area={area} reversed={i % 2 !== 0} />
-      ))}
-
-      {/* ── CTA ── */}
+      {/* CTA */}
       <div
         ref={ctaRef}
-        className={`front-donation ia-bg-sky flex-module wow fadeInUpS${ctaInView ? " is-visible" : ""}`}
+        className={`front-donation ia-bg-sky flex-module wow fadeInUpS${ctaVis}`}
       >
         <div className="inner inner--slim-1172">
-          <div className={`sub-heading wow fadeInUpS${ctaInView ? " is-visible" : ""}`} style={{ animationDelay: "0.1s" }}>
-            Not Sure If We Cover You?
+          <div className={`sub-heading wow fadeInUpS${ctaVis}`} style={{ animationDelay: "0.1s" }}>
+            Not sure if we cover your area?
           </div>
-          <h2 className={`h2 wow fadeInUpS${ctaInView ? " is-visible" : ""}`} style={{ animationDelay: "0.2s" }}>
+          <h2 className={`h2 wow fadeInUpS${ctaVis}`} style={{ animationDelay: "0.15s" }}>
             Just Call — We Almost Certainly Do
           </h2>
-          <div className={`front-donation__in wow fadeInUpS${ctaInView ? " is-visible" : ""}`} style={{ animationDelay: "0.2s" }}>
+          <div className={`front-donation__in wow fadeInUpS${ctaVis}`} style={{ animationDelay: "0.2s" }}>
             <div className="content-entry">
               <p>
-                Our dispatch is fast and our coverage is wide. Call <strong>(718) 749-1830</strong> and
-                we&apos;ll confirm in 30 seconds and get you on the schedule the same day.
+                Our licensed electricians cover all five boroughs of New York City.
+                If you&apos;re in NYC and need electrical work, call us — same-day
+                service available.
               </p>
             </div>
             <div className="front-donation__btn-wrap">
               <div className="front-donation__btn">
-                <a className="btn btn--primary" href="tel:7187491830">
-                  Call (718) 749-1830
-                </a>
+                <SecondaryButton label="Call (646) 340-9882" href="tel:6463409882" />
               </div>
             </div>
           </div>

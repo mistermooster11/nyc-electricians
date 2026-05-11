@@ -22,8 +22,8 @@ export async function generateMetadata({
   const data = servicePages[slug];
   if (!data) return {};
   return {
-    title: `${data.title} — Pipe Monkeys`,
-    description: `Professional ${data.title.toLowerCase()} service in Brooklyn, Queens, and Nassau County. Upfront pricing, same-day scheduling, guaranteed results.`,
+    title: `${data.title} — New York City Electricians`,
+    description: `Professional ${data.title.toLowerCase()} service across all five NYC boroughs. Licensed, insured, upfront pricing, same-day scheduling.`,
   };
 }
 
@@ -86,7 +86,7 @@ export default async function ServiceDetailPage({
                   <p>
                     <strong>Ready to book?</strong>{" "}
                     Call{" "}
-                    <a href="tel:7187491830">(718) 749-1830</a>{" "}
+                    <a (href="tel:6463409882">(646) 340-9882</a>{" "}
                     for same-day scheduling, or{" "}
                     <a href="/contact-us">send us a message online</a>.
                     We give you a price before we start — no surprises.
@@ -100,8 +100,8 @@ export default async function ServiceDetailPage({
             <RelatedCrafts
               description={
                 <p>
-                  Pipe Monkeys handles every type of drain and sewer problem
-                  across Brooklyn, Queens, and Nassau County. Explore our other
+                  New York City Electricians handles every type of residential and commercial electrical problem
+                  across all five NYC boroughs. Explore our other
                   services below.
                 </p>
               }

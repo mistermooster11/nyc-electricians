@@ -2,9 +2,9 @@ import CraftCatalogHero from "@/components/custom/craft-catalog/CraftCatalogHero
 import CraftCatalogClient from "@/components/custom/craft-catalog/CraftCatalogClient";
 
 export const metadata = {
-  title: "Our Services – Pipe Monkeys",
+  title: "Our Services – New York City Electricians",
   description:
-    "Pipe Monkeys offers drain clearing and plumbing services across Brooklyn, Queens, and Nassau County. From kitchen sinks to main sewer lines — same-day service, upfront pricing.",
+    "New York City Electricians provides licensed residential and commercial electrical services across all five NYC boroughs — panel upgrades, EV chargers, wiring, and more.",
 };
 
 export default function CraftCatalogPage() {

@@ -4,155 +4,63 @@ export type ServiceNavItem = { href: string; label: string };
 
 export type ServicePageData = {
   title: string;
-  /** Fallback background color while TODO image is pending */
   bgColor: string;
   navItems: ServiceNavItem[];
-  /** Short intro paragraph shown in CraftOverview left column */
   overviewContent: ReactNode;
-  /** Quick links shown in CraftOverview right column */
   overviewQuickLinks: { label: string; href: string }[];
-  /** Middle content sections rendered between overview and related services */
   sections: { id: string; heading: string; content: ReactNode }[];
-  /** "Related Services" links at page bottom */
   relatedServices: { label: string; href: string }[];
 };
 
 export const servicePages: Record<string, ServicePageData> = {
 
-  /* ─── MAIN SEWER LINES ─────────────────────────────────────────────────── */
-  "main-sewer-lines": {
-    title: "Main Sewer Lines",
+  "panel-upgrades": {
+    title: "Panel Upgrades & Replacements",
     bgColor: "#101d2b",
     navItems: [
-      { href: "#overview",          label: "Overview"          },
-      { href: "#when_you_need_it",  label: "When You Need It"  },
-      { href: "#our_process",       label: "Our Process"       },
-      { href: "#related_services",  label: "Related Services"  },
+      { href: "#overview",         label: "Overview"         },
+      { href: "#when_you_need_it", label: "When You Need It" },
+      { href: "#our_process",      label: "Our Process"      },
+      { href: "#related_services", label: "Related Services" },
     ],
     overviewContent: (
       <>
         <p>
-          When the main sewer line backs up, every drain in the building stops
-          working. These blockages — caused by root intrusion, grease and scale
-          buildup, or decades of accumulation — require industrial-grade equipment
-          that goes beyond what a standard snake can handle.
+          Most New York City homes were built with 60- or 100-amp panels — not
+          enough to safely support modern appliances, EV chargers, central A/C,
+          or additional circuits. An overloaded or outdated panel is a fire hazard
+          and a daily frustration.
         </p>
         <p>
-          Pipe Monkeys techs clear main sewer lines in Brooklyn brownstones, Queens
-          multi-family buildings, and Nassau County homes with long underground
-          runs — every single day.
+          New York City Electricians upgrades residential and commercial panels to
+          200-amp service across all five boroughs — pulling all required permits,
+          passing final inspection, and leaving you with a safe, code-compliant
+          electrical system.
         </p>
       </>
     ),
     overviewQuickLinks: [
-      { label: "Call (718) 749-1830", href: "tel:7187491830"   },
-      { label: "Contact Us Online",   href: "/contact-us"      },
-    ],
-    sections: [
-      {
-        id: "when_you_need_it",
-        heading: "When Do You Need Main Line Service?",
-        content: (
-          <>
-            <p>
-              Multiple drains backing up at once is the clearest sign your main
-              sewer line is blocked — not just a single fixture. Other warning signs
-              include gurgling sounds from drains, slow flow on every floor of the
-              building, sewage odors, or water backing up in the tub when you flush
-              the toilet.
-            </p>
-            <p>
-              These symptoms don&rsquo;t clear on their own. The longer a main line
-              blockage sits, the higher the risk of a sewage backup into the basement
-              or lower-level units. Call us as soon as these signs appear.
-            </p>
-          </>
-        ),
-      },
-      {
-        id: "our_process",
-        heading: "How We Handle It",
-        content: (
-          <>
-            <p>
-              <strong>Step 1 — Diagnose.</strong> We assess the situation before
-              any tools go in. For main line jobs, we confirm the blockage location
-              and severity and recommend a camera inspection when the cause isn&rsquo;t
-              obvious.
-            </p>
-            <p>
-              <strong>Step 2 — Quote Upfront.</strong> You get the price before
-              we start — no surprises. What we quote is what you pay.
-            </p>
-            <p>
-              <strong>Step 3 — Clear It.</strong> We use industrial electric cutters
-              and hydro jetting equipment to break through and flush out root masses,
-              grease plugs, and heavy scale. We don&rsquo;t leave until flow is fully
-              restored.
-            </p>
-            <p>
-              <strong>Step 4 — Confirm and Clean Up.</strong> We run water through
-              to verify full flow, show you the result, and leave the area cleaner
-              than we found it. Shoe covers and drop cloths on every job.
-            </p>
-          </>
-        ),
-      },
-    ],
-    relatedServices: [
-      { label: "Camera Inspection",         href: "/craft-catalog/camera-inspection"    },
-      { label: "Hydro Jetting",             href: "/craft-catalog/hydro-jetting"        },
-      { label: "Drain Snaking & Augering",  href: "/craft-catalog/drain-snaking"        },
-      { label: "Multi-Unit Buildings",      href: "/craft-catalog/multi-unit-buildings" },
-    ],
-  },
-
-  /* ─── KITCHEN SINKS ────────────────────────────────────────────────────── */
-  "kitchen-sinks": {
-    title: "Kitchen Sinks",
-    bgColor: "#101d2b",
-    navItems: [
-      { href: "#overview",          label: "Overview"         },
-      { href: "#when_you_need_it",  label: "When You Need It" },
-      { href: "#our_process",       label: "Our Process"      },
-      { href: "#related_services",  label: "Related Services" },
-    ],
-    overviewContent: (
-      <>
-        <p>
-          Grease, food debris, and soap scum are the three main kitchen drain
-          killers — and in New York City buildings with heavy daily use, they
-          build up faster than anywhere else. A slow kitchen sink almost always
-          means the problem is already significant inside the pipe.
-        </p>
-        <p>
-          Pipe Monkeys clears kitchen drains across Brooklyn, Queens, and Nassau
-          County using professional snakes and hydro jetting, depending on the
-          severity. No mess, no chemical damage to pipes.
-        </p>
-      </>
-    ),
-    overviewQuickLinks: [
-      { label: "Call (718) 749-1830", href: "tel:7187491830" },
+      { label: "Call (646) 340-9882", href: "tel:6463409882" },
       { label: "Contact Us Online",   href: "/contact-us"    },
     ],
     sections: [
       {
         id: "when_you_need_it",
-        heading: "When Do You Need Kitchen Drain Service?",
+        heading: "Do You Need a Panel Upgrade?",
         content: (
           <>
             <p>
-              A kitchen drain that drains slowly, backs up under the sink, or
-              emits a persistent odor is telling you grease or debris has
-              accumulated in the line. In buildings with garbage disposals, the
-              buildup accelerates — and chemical drain cleaners can actually make
-              the long-term problem worse by softening older pipes.
+              Signs you need a panel upgrade: breakers that trip repeatedly, the
+              inability to run multiple high-draw appliances at once, a fuse box
+              instead of a breaker panel, flickering lights, or an insurance
+              company flagging your electrical system. If you&rsquo;re installing
+              an EV charger, adding central A/C, or finishing a basement, a panel
+              upgrade is almost always required.
             </p>
             <p>
-              Don&rsquo;t wait until the sink stops draining completely. Early
-              intervention is cheaper, faster, and keeps standing water and odors
-              out of your kitchen.
+              Older panels from brands like Federal Pacific or Zinsco have known
+              safety defects. If you have one of these, call us — it&rsquo;s worth
+              getting it assessed as soon as possible.
             </p>
           </>
         ),
@@ -163,82 +71,80 @@ export const servicePages: Record<string, ServicePageData> = {
         content: (
           <>
             <p>
-              <strong>Step 1 — Diagnose.</strong> We look at the sink, check
-              under the cabinet, and assess how far the blockage has progressed.
-              We&rsquo;ll tell you whether snaking or jetting is the right call
-              and why.
+              <strong>Step 1 — Assessment.</strong> We evaluate your current panel,
+              calculate your load, and confirm what amperage upgrade is appropriate
+              for your home or building.
             </p>
             <p>
-              <strong>Step 2 — Quote Upfront.</strong> Price is confirmed before
-              any work begins. No bait-and-switch.
+              <strong>Step 2 — Permit Pulling.</strong> We handle all permit
+              applications. Every panel upgrade in NYC requires a permit — we
+              manage this so you don&rsquo;t have to.
             </p>
             <p>
-              <strong>Step 3 — Clear It.</strong> For grease buildup, hydro
-              jetting scrubs the pipe walls clean — reducing the chance of a
-              repeat clog. For straightforward blockages, a professional electric
-              snake breaks it up fast and gets the line flowing.
+              <strong>Step 3 — Installation.</strong> We install the new panel,
+              reconnect all circuits cleanly, and label everything properly.
             </p>
             <p>
-              <strong>Step 4 — Test and Clean Up.</strong> We run hot water to
-              confirm full drainage and wipe down the work area before we leave.
+              <strong>Step 4 — Inspection &amp; Sign-Off.</strong> We coordinate
+              the final inspection and make sure the work passes the first time.
             </p>
           </>
         ),
       },
     ],
     relatedServices: [
-      { label: "Hydro Jetting",            href: "/craft-catalog/hydro-jetting"       },
-      { label: "Drain Snaking & Augering", href: "/craft-catalog/drain-snaking"       },
-      { label: "Main Sewer Lines",         href: "/craft-catalog/main-sewer-lines"    },
-      { label: "Multi-Unit Buildings",     href: "/craft-catalog/multi-unit-buildings"},
+      { label: "EV Charger Installation",          href: "/craft-catalog/ev-charger-installation" },
+      { label: "Electrical Wiring & New Circuits", href: "/craft-catalog/electrical-wiring"       },
+      { label: "Circuit Breaker Repair",           href: "/craft-catalog/circuit-breaker-repair"  },
+      { label: "A/C, Heating & Boiler Wiring",     href: "/craft-catalog/ac-heating-circuits"     },
     ],
   },
 
-  /* ─── TUBS & SHOWERS ───────────────────────────────────────────────────── */
-  "tubs-and-showers": {
-    title: "Tubs & Showers",
+  "ev-charger-installation": {
+    title: "EV Charger Installation",
     bgColor: "#101d2b",
     navItems: [
-      { href: "#overview",          label: "Overview"         },
-      { href: "#when_you_need_it",  label: "When You Need It" },
-      { href: "#our_process",       label: "Our Process"      },
-      { href: "#related_services",  label: "Related Services" },
+      { href: "#overview",         label: "Overview"         },
+      { href: "#when_you_need_it", label: "When You Need It" },
+      { href: "#our_process",      label: "Our Process"      },
+      { href: "#related_services", label: "Related Services" },
     ],
     overviewContent: (
       <>
         <p>
-          Hair, soap residue, and mineral deposits accumulate silently inside tub
-          and shower drains until you&rsquo;re standing in ankle-deep water. The
-          fix is straightforward — but done wrong, it damages tile, p-traps, or
-          the drain body itself.
+          A Level 2 EV charger requires a dedicated 240-volt circuit — the same
+          voltage as a clothes dryer. Most homes need a panel assessment before
+          installation to confirm there&rsquo;s adequate capacity. Done right, a
+          home charger gives you 20–30 miles of range per hour of charging.
         </p>
         <p>
-          Pipe Monkeys removes bathroom drain blockages cleanly and carefully, with
-          shoe covers and drop cloths on every job. Your bathroom goes back to normal
-          — or better.
+          New York City Electricians installs EV chargers for all major brands in
+          homes, garages, and commercial parking facilities across all five boroughs.
+          We handle the permit, the circuit, and the charger install in one visit.
         </p>
       </>
     ),
     overviewQuickLinks: [
-      { label: "Call (718) 749-1830", href: "tel:7187491830" },
+      { label: "Call (646) 340-9882", href: "tel:6463409882" },
       { label: "Contact Us Online",   href: "/contact-us"    },
     ],
     sections: [
       {
         id: "when_you_need_it",
-        heading: "When Do You Need Tub & Shower Drain Service?",
+        heading: "Level 1 vs. Level 2: Which Do You Need?",
         content: (
           <>
             <p>
-              Standing water in the tub, a drain that takes minutes to clear after
-              a shower, or a persistent musty smell from the drain are all signs of a
-              buildup that a plunger won&rsquo;t fix. In older NYC buildings, mineral
-              deposits from hard water compound the problem — narrowing pipes gradually
-              until they nearly close off.
+              Level 1 chargers plug into a standard 120V outlet and add about
+              4–5 miles per hour. Level 2 chargers use a 240V dedicated circuit
+              and charge 6–8x faster — most EV owners prefer them for daily home
+              charging. If you&rsquo;re driving a long-range EV, Level 2 is the
+              practical choice.
             </p>
             <p>
-              If you&rsquo;ve already tried drain cleaning solutions without results,
-              the clog is past the point of DIY. Call us.
+              We&rsquo;ll assess your panel and confirm the best installation
+              approach for your specific vehicle and charging habits before
+              recommending anything.
             </p>
           </>
         ),
@@ -249,80 +155,77 @@ export const servicePages: Record<string, ServicePageData> = {
         content: (
           <>
             <p>
-              <strong>Step 1 — Diagnose.</strong> We assess the drain type, check the
-              p-trap and trap arm for accessibility, and confirm the blockage is in
-              the drain line — not the main stack.
+              <strong>Step 1 — Panel Assessment.</strong> We check your panel
+              capacity and confirm whether a panel upgrade is needed before
+              adding the circuit.
             </p>
             <p>
-              <strong>Step 2 — Quote Upfront.</strong> Price confirmed before we
-              touch anything. You approve — then we work.
+              <strong>Step 2 — Permit &amp; Quote.</strong> We pull all required
+              permits and give you an upfront price before work begins.
             </p>
             <p>
-              <strong>Step 3 — Clear It.</strong> We use the right cable gauge for
-              the pipe size — no forcing, no guessing. The blockage comes out cleanly
-              without damaging the drain body or tile surround.
+              <strong>Step 3 — Circuit &amp; Install.</strong> We run the dedicated
+              240V circuit and install the NEMA 14-50 outlet or hardwired charger.
             </p>
             <p>
-              <strong>Step 4 — Test and Clean Up.</strong> We run the shower and
-              confirm full drainage before leaving. Shoe covers and drop cloths mean
-              your bathroom floor stays clean throughout.
+              <strong>Step 4 — Test &amp; Confirm.</strong> We verify the charger
+              is working correctly and walk you through how to use it before leaving.
             </p>
           </>
         ),
       },
     ],
     relatedServices: [
-      { label: "Drain Snaking & Augering", href: "/craft-catalog/drain-snaking"    },
-      { label: "Toilets",                  href: "/craft-catalog/toilets"           },
-      { label: "Hydro Jetting",            href: "/craft-catalog/hydro-jetting"     },
-      { label: "Kitchen Sinks",            href: "/craft-catalog/kitchen-sinks"     },
+      { label: "Panel Upgrades & Replacements",    href: "/craft-catalog/panel-upgrades"      },
+      { label: "Electrical Wiring & New Circuits", href: "/craft-catalog/electrical-wiring"   },
+      { label: "GFCI Outlets & New Outlets",       href: "/craft-catalog/gfci-outlets"        },
+      { label: "A/C, Heating & Boiler Wiring",     href: "/craft-catalog/ac-heating-circuits" },
     ],
   },
 
-  /* ─── TOILETS ──────────────────────────────────────────────────────────── */
-  "toilets": {
-    title: "Toilets",
+  "electrical-wiring": {
+    title: "Electrical Wiring & New Circuits",
     bgColor: "#101d2b",
     navItems: [
-      { href: "#overview",          label: "Overview"         },
-      { href: "#when_you_need_it",  label: "When You Need It" },
-      { href: "#our_process",       label: "Our Process"      },
-      { href: "#related_services",  label: "Related Services" },
+      { href: "#overview",         label: "Overview"         },
+      { href: "#when_you_need_it", label: "When You Need It" },
+      { href: "#our_process",      label: "Our Process"      },
+      { href: "#related_services", label: "Related Services" },
     ],
     overviewContent: (
       <>
         <p>
-          Stubborn toilet clogs — including foreign objects, excessive paper, and
-          blockages too deep for a plunger to reach — require the right auger and
-          the right technique. Forcing the wrong tool causes damage; calling too
-          late turns a simple clog into a sewage backup.
+          From adding new circuits for a home office to rewiring an entire
+          pre-war apartment, New York City Electricians handles all residential
+          and commercial wiring work — including new circuits, new outlets and
+          switches, electrical relocation, and upgrades to existing systems.
         </p>
         <p>
-          Pipe Monkeys handles toilet clogs fast, without splash, and without damage
-          to the toilet body or floor. We test the flush before leaving.
+          All wiring work is done to current NEC code, with permits pulled and
+          inspections passed before we close the job.
         </p>
       </>
     ),
     overviewQuickLinks: [
-      { label: "Call (718) 749-1830", href: "tel:7187491830" },
+      { label: "Call (646) 340-9882", href: "tel:6463409882" },
       { label: "Contact Us Online",   href: "/contact-us"    },
     ],
     sections: [
       {
         id: "when_you_need_it",
-        heading: "When Do You Need Toilet Clog Service?",
+        heading: "When Do You Need New Wiring or Circuits?",
         content: (
           <>
             <p>
-              If a plunger hasn&rsquo;t resolved the clog after a few attempts, the
-              blockage is past the trap — deeper in the drain line or in an object
-              that can&rsquo;t be pushed through. Common culprits include: children&rsquo;s
-              toys, hygiene products, excessive wipes (even &ldquo;flushable&rdquo; ones),
-              and buildup at the horn of older toilets.
+              Common triggers: adding a dedicated circuit for a major appliance,
+              finishing a basement or adding a room, replacing knob-and-tube or
+              aluminum wiring, an inspector flagging wiring defects, or needing
+              more outlets in a renovated space.
             </p>
             <p>
-              A partial clog that flushes slowly is also worth addressing before it
-              becomes a full backup. Call us before the situation escalates.
+              Older NYC buildings often have undersized wiring that can&rsquo;t
+              support modern load demands. Our team works safely in finished walls
+              — minimizing disruption while getting the circuit where it needs to go.
             </p>
           </>
         ),
@@ -333,82 +236,80 @@ export const servicePages: Record<string, ServicePageData> = {
         content: (
           <>
             <p>
-              <strong>Step 1 — Diagnose.</strong> We determine whether the clog is
-              in the toilet trap, the flange connection, or deeper in the drain line.
-              That determines the right tool.
+              <strong>Step 1 — Scope the Work.</strong> We assess the current
+              wiring, determine the best routing for new circuits, and confirm
+              panel capacity is sufficient.
             </p>
             <p>
-              <strong>Step 2 — Quote Upfront.</strong> You get a clear price before
-              any work begins.
+              <strong>Step 2 — Permit &amp; Price.</strong> We pull any required
+              permits and confirm the price before work begins. No surprises.
             </p>
             <p>
-              <strong>Step 3 — Clear It.</strong> We use a professional closet auger
-              to retrieve the object or break up the blockage without scratching the
-              bowl or damaging the internal glaze. We&rsquo;ve cleared everything from
-              toys to full pipe obstructions.
+              <strong>Step 3 — Run the Circuit.</strong> We fish cable through
+              walls wherever possible to minimize opening. When cuts are necessary,
+              we patch and clean up.
             </p>
             <p>
-              <strong>Step 4 — Test and Clean Up.</strong> Multiple test flushes
-              confirm the line is clear. We wipe down and leave the bathroom exactly
-              as we found it.
+              <strong>Step 4 — Inspect &amp; Test.</strong> All new circuits tested
+              under load. If a permit was pulled, we schedule and pass inspection
+              before closing the job.
             </p>
           </>
         ),
       },
     ],
     relatedServices: [
-      { label: "Tubs & Showers",           href: "/craft-catalog/tubs-and-showers" },
-      { label: "Drain Snaking & Augering", href: "/craft-catalog/drain-snaking"    },
-      { label: "Main Sewer Lines",         href: "/craft-catalog/main-sewer-lines" },
-      { label: "Camera Inspection",        href: "/craft-catalog/camera-inspection"},
+      { label: "Panel Upgrades & Replacements",  href: "/craft-catalog/panel-upgrades"        },
+      { label: "GFCI Outlets & New Outlets",     href: "/craft-catalog/gfci-outlets"          },
+      { label: "A/C, Heating & Boiler Wiring",   href: "/craft-catalog/ac-heating-circuits"   },
+      { label: "Lighting Installation",          href: "/craft-catalog/lighting-installation" },
     ],
   },
 
-  /* ─── HYDRO JETTING ────────────────────────────────────────────────────── */
-  "hydro-jetting": {
-    title: "Hydro Jetting",
+  "lighting-installation": {
+    title: "Lighting Installation",
     bgColor: "#101d2b",
     navItems: [
-      { href: "#overview",          label: "Overview"         },
-      { href: "#when_you_need_it",  label: "When You Need It" },
-      { href: "#our_process",       label: "Our Process"      },
-      { href: "#related_services",  label: "Related Services" },
+      { href: "#overview",         label: "Overview"         },
+      { href: "#when_you_need_it", label: "When You Need It" },
+      { href: "#our_process",      label: "Our Process"      },
+      { href: "#related_services", label: "Related Services" },
     ],
     overviewContent: (
       <>
         <p>
-          A snake clears a path through a clog. Hydro jetting actually scrubs the
-          interior pipe walls — using high-pressure water to blast away grease, scale,
-          mineral deposits, and root fragments from the inside out.
+          From ceiling fans and light fixtures to landscape lighting, security
+          lights, and emergency exit signs — New York City Electricians installs
+          and replaces all types of lighting in residential and commercial spaces
+          across all five boroughs.
         </p>
         <p>
-          If the same drain has backed up multiple times in the past year, jetting is
-          the long-term fix. Pipe Monkeys offers hydro jetting for kitchen lines, main
-          sewer lines, and commercial buildings throughout Brooklyn, Queens, and Nassau
-          County.
+          We handle the wiring, mounting, and connection so every job is done safely
+          and to code. No unstable fixtures, no improper wiring.
         </p>
       </>
     ),
     overviewQuickLinks: [
-      { label: "Call (718) 749-1830", href: "tel:7187491830" },
+      { label: "Call (646) 340-9882", href: "tel:6463409882" },
       { label: "Contact Us Online",   href: "/contact-us"    },
     ],
     sections: [
       {
         id: "when_you_need_it",
-        heading: "When Is Hydro Jetting the Right Call?",
+        heading: "What Lighting Services Do We Cover?",
         content: (
           <>
             <p>
-              Hydro jetting is the right call when: a drain has recurring clogs despite
-              regular snaking; there is confirmed grease buildup in a restaurant or
-              commercial kitchen line; a camera inspection reveals significant scale or
-              root intrusion that a cutter alone won&rsquo;t fully resolve; or a
-              landlord wants a clean baseline before a new tenant moves in.
+              We install and replace: ceiling fan and light combos, recessed
+              lighting, pendant fixtures, under-cabinet lighting, chandeliers,
+              outdoor landscape and security lights, motion-sensor lights, and
+              commercial emergency lights and exit signs. We also handle dimmer
+              switches and smart lighting controls.
             </p>
             <p>
-              Jetting is not the right first tool for every job — we&rsquo;ll always
-              recommend it when it&rsquo;s warranted, and only when it&rsquo;s warranted.
+              If you&rsquo;re renovating and want new fixtures throughout, or just
+              need a single light replaced, our licensed electricians handle both
+              — same professional standard either way.
             </p>
           </>
         ),
@@ -419,81 +320,80 @@ export const servicePages: Record<string, ServicePageData> = {
         content: (
           <>
             <p>
-              <strong>Step 1 — Camera First (Recommended).</strong> For main line
-              jetting, we run a camera to confirm the pipe is structurally sound before
-              introducing high pressure. Jetting a cracked or collapsed pipe makes the
-              problem worse.
+              <strong>Step 1 — Assess the Location.</strong> We confirm the
+              mounting box, wiring, and circuit are appropriate for the fixture
+              type being installed.
             </p>
             <p>
-              <strong>Step 2 — Quote Upfront.</strong> Price confirmed before we start.
+              <strong>Step 2 — Quote Upfront.</strong> Clear price before any
+              work begins.
             </p>
             <p>
-              <strong>Step 3 — Jet It.</strong> We feed the jetting hose into the
-              clean-out or access point and work the nozzle through the line at up to
-              4,000 PSI — forward and backward — until the walls are clean and flow
-              is fully restored.
+              <strong>Step 3 — Install &amp; Wire.</strong> We mount the fixture
+              securely, make all connections properly, and wire switch controls
+              correctly.
             </p>
             <p>
-              <strong>Step 4 — Confirm.</strong> We run water to verify full flow
-              and, on main line jobs, can run a post-jet camera to show you the results.
+              <strong>Step 4 — Test &amp; Clean Up.</strong> Every fixture tested
+              on before we leave. All packaging and debris cleaned up.
             </p>
           </>
         ),
       },
     ],
     relatedServices: [
-      { label: "Camera Inspection",        href: "/craft-catalog/camera-inspection"   },
-      { label: "Main Sewer Lines",         href: "/craft-catalog/main-sewer-lines"    },
-      { label: "Kitchen Sinks",            href: "/craft-catalog/kitchen-sinks"       },
-      { label: "Multi-Unit Buildings",     href: "/craft-catalog/multi-unit-buildings"},
+      { label: "Electrical Wiring & New Circuits",      href: "/craft-catalog/electrical-wiring"      },
+      { label: "GFCI Outlets & New Outlets",            href: "/craft-catalog/gfci-outlets"           },
+      { label: "Safety & Alarm Systems",                href: "/craft-catalog/home-safety-systems"    },
+      { label: "Appliance Installation & Fan Services", href: "/craft-catalog/appliance-installation" },
     ],
   },
 
-  /* ─── DRAIN SNAKING & AUGERING ─────────────────────────────────────────── */
-  "drain-snaking": {
-    title: "Drain Snaking & Augering",
+  "circuit-breaker-repair": {
+    title: "Circuit Breaker Repair",
     bgColor: "#101d2b",
     navItems: [
-      { href: "#overview",          label: "Overview"         },
-      { href: "#when_you_need_it",  label: "When You Need It" },
-      { href: "#our_process",       label: "Our Process"      },
-      { href: "#related_services",  label: "Related Services" },
+      { href: "#overview",         label: "Overview"         },
+      { href: "#when_you_need_it", label: "When You Need It" },
+      { href: "#our_process",      label: "Our Process"      },
+      { href: "#related_services", label: "Related Services" },
     ],
     overviewContent: (
       <>
         <p>
-          Drain snaking is the first-line tool for most residential clogs. Our
-          professional-grade electric snakes reach further, spin harder, and break
-          through blockages that hand snakes and drugstore augers can&rsquo;t touch.
+          A tripping breaker, flickering lights, or a blown fuse aren&rsquo;t
+          just inconveniences — they&rsquo;re symptoms. Sometimes the fix is a
+          simple breaker replacement. Sometimes they signal a wiring fault,
+          an overloaded circuit, or a panel that&rsquo;s reached the end of its
+          safe service life.
         </p>
         <p>
-          Pipe Monkeys carries multiple cable sizes — from small bathroom drain cables
-          to full main-line cables — so the right tool is always on the truck when we
-          arrive.
+          New York City Electricians diagnoses circuit and breaker issues across
+          all five boroughs and tells you exactly what&rsquo;s causing the problem
+          — not just what&rsquo;s easiest to bill.
         </p>
       </>
     ),
     overviewQuickLinks: [
-      { label: "Call (718) 749-1830", href: "tel:7187491830" },
+      { label: "Call (646) 340-9882", href: "tel:6463409882" },
       { label: "Contact Us Online",   href: "/contact-us"    },
     ],
     sections: [
       {
         id: "when_you_need_it",
-        heading: "When Do You Need Drain Snaking?",
+        heading: "When Do You Need Circuit Breaker Service?",
         content: (
           <>
             <p>
-              Snaking is the right call for most single-drain clogs — kitchen sinks,
-              bathroom sinks, tubs, showers, and toilets where the blockage is localized.
-              It&rsquo;s also the first step for main line jobs before deciding whether
-              hydro jetting is needed.
+              Call us when: a breaker trips repeatedly and won&rsquo;t stay reset;
+              lights flicker when appliances run; fuses blow more than once a month;
+              you hear buzzing or smell burning near the panel; or a specific circuit
+              has stopped working entirely.
             </p>
             <p>
-              If you&rsquo;ve tried a plunger or a hand snake without results, the
-              clog is past what consumer tools can reach. A professional cable gets
-              into the line, breaks up or retrieves the obstruction, and leaves the
-              drain fully open.
+              Some of these symptoms indicate a simple fix. Others are signs of
+              dangerous underlying wiring faults. We diagnose first so you know
+              exactly what you&rsquo;re dealing with before spending money on anything.
             </p>
           </>
         ),
@@ -504,81 +404,78 @@ export const servicePages: Record<string, ServicePageData> = {
         content: (
           <>
             <p>
-              <strong>Step 1 — Select the Right Tool.</strong> Cable diameter matters.
-              We match the cable to the pipe size — forcing an oversized cable causes
-              damage; undersizing leaves the clog intact.
+              <strong>Step 1 — Diagnose.</strong> We assess the panel, the breaker,
+              and the circuit load to determine the root cause — not just the symptom.
             </p>
             <p>
-              <strong>Step 2 — Quote Upfront.</strong> You know the price before work
-              begins.
+              <strong>Step 2 — Quote Upfront.</strong> We explain what we found
+              and what fixing it costs before touching anything.
             </p>
             <p>
-              <strong>Step 3 — Snake It.</strong> We feed the cable through the access
-              point (drain opening, clean-out, or trap access) and work through the
-              blockage until the line clears. If the cable hits something it can&rsquo;t
-              resolve, we&rsquo;ll tell you immediately — no pushing blind.
+              <strong>Step 3 — Repair or Replace.</strong> We replace faulty
+              breakers, rebalance overloaded circuits, or recommend a panel upgrade
+              if the root cause requires it.
             </p>
             <p>
-              <strong>Step 4 — Test and Clean Up.</strong> Water runs to confirm full
-              drainage. Cable, debris, and equipment cleaned up before we leave.
+              <strong>Step 4 — Test Under Load.</strong> We test the repaired
+              circuit under real load conditions to confirm it&rsquo;s stable.
             </p>
           </>
         ),
       },
     ],
     relatedServices: [
-      { label: "Hydro Jetting",        href: "/craft-catalog/hydro-jetting"     },
-      { label: "Main Sewer Lines",     href: "/craft-catalog/main-sewer-lines"  },
-      { label: "Kitchen Sinks",        href: "/craft-catalog/kitchen-sinks"     },
-      { label: "Tubs & Showers",       href: "/craft-catalog/tubs-and-showers"  },
+      { label: "Panel Upgrades & Replacements",    href: "/craft-catalog/panel-upgrades"    },
+      { label: "Electrical Wiring & New Circuits", href: "/craft-catalog/electrical-wiring" },
+      { label: "GFCI Outlets & New Outlets",       href: "/craft-catalog/gfci-outlets"      },
+      { label: "A/C, Heating & Boiler Wiring",     href: "/craft-catalog/ac-heating-circuits" },
     ],
   },
 
-  /* ─── CAMERA INSPECTION ────────────────────────────────────────────────── */
-  "camera-inspection": {
-    title: "Camera Inspection",
+  "gfci-outlets": {
+    title: "GFCI Outlets & New Outlets",
     bgColor: "#101d2b",
     navItems: [
-      { href: "#overview",          label: "Overview"         },
-      { href: "#when_you_need_it",  label: "When You Need It" },
-      { href: "#our_process",       label: "Our Process"      },
-      { href: "#related_services",  label: "Related Services" },
+      { href: "#overview",         label: "Overview"         },
+      { href: "#when_you_need_it", label: "When You Need It" },
+      { href: "#our_process",      label: "Our Process"      },
+      { href: "#related_services", label: "Related Services" },
     ],
     overviewContent: (
       <>
         <p>
-          Before recommending a major repair, jetting service, or repeated snaking,
-          Pipe Monkeys can run a camera through your main line and show you exactly
-          what&rsquo;s in there — in real time. You see what we see: root intrusion,
-          grease buildup, pipe damage, or collapsed sections.
+          GFCI outlets are required by code in kitchens, bathrooms, garages, and
+          outdoor locations — and missing or faulty GFCIs are a common failure point
+          on home inspections. We also install new standard outlets and switches
+          wherever they&rsquo;re needed.
         </p>
         <p>
-          No guesswork. No upsells on work you don&rsquo;t need.
+          New York City Electricians installs, replaces, and troubleshoots outlets
+          and switches throughout all five boroughs. Quick jobs and large-scale
+          outlet additions handled the same day.
         </p>
       </>
     ),
     overviewQuickLinks: [
-      { label: "Call (718) 749-1830", href: "tel:7187491830" },
+      { label: "Call (646) 340-9882", href: "tel:6463409882" },
       { label: "Contact Us Online",   href: "/contact-us"    },
     ],
     sections: [
       {
         id: "when_you_need_it",
-        heading: "When Do You Need a Camera Inspection?",
+        heading: "When Do You Need Outlet Service?",
         content: (
           <>
             <p>
-              Camera inspection is the right call when: a main line blockage keeps
-              coming back after repeated snaking; you&rsquo;re buying or selling a
-              home and want to know the condition of the sewer line; a plumber or
-              contractor recommends an expensive repair and you want independent
-              verification; or we recommend hydro jetting and want to confirm the
-              pipe is structurally sound first.
+              Common reasons: a dead outlet that won&rsquo;t reset, adding outlets
+              in a newly finished space, replacing two-prong ungrounded outlets,
+              upgrading to GFCI in wet areas for code compliance, or installing USB
+              outlets in a renovation.
             </p>
             <p>
-              It&rsquo;s also useful after a major clearing job — we can show you the
-              before-and-after results so you know the line is actually clean, not
-              just partially cleared.
+              If an outlet is warm to the touch, has scorch marks, or has never
+              worked since you moved in, call us — these can indicate underlying
+              wiring problems that go beyond the outlet itself.
             </p>
           </>
         ),
@@ -589,85 +486,79 @@ export const servicePages: Record<string, ServicePageData> = {
         content: (
           <>
             <p>
-              <strong>Step 1 — Access the Line.</strong> We locate the clean-out or
-              access point nearest to the problem area. In buildings without a clean-out,
-              we&rsquo;ll advise on the best access option.
+              <strong>Step 1 — Assess.</strong> We check the outlet, the wiring
+              behind it, and the circuit to confirm the issue is the device and not
+              something deeper.
             </p>
             <p>
-              <strong>Step 2 — Quote Upfront.</strong> Price confirmed before the
-              camera goes in.
+              <strong>Step 2 — Quote Upfront.</strong> Clear price before we
+              touch anything.
             </p>
             <p>
-              <strong>Step 3 — Run the Camera.</strong> We feed a high-resolution
-              camera through the line and walk you through what we see — root masses,
-              grease, cracks, offsets, or clear pipe. You&rsquo;re watching the screen
-              in real time.
+              <strong>Step 3 — Install &amp; Wire.</strong> We install the new
+              outlet or GFCI correctly — proper grounding, correct wiring
+              orientation, and secure mounting.
             </p>
             <p>
-              <strong>Step 4 — Report and Recommend.</strong> We tell you what we found
-              and what, if anything, needs to be done — with the footage to back it up.
-              You decide how to proceed. No pressure.
+              <strong>Step 4 — Test.</strong> Every outlet tested with a circuit
+              tester. GFCI outlets tested for proper trip and reset function.
             </p>
           </>
         ),
       },
     ],
     relatedServices: [
-      { label: "Hydro Jetting",            href: "/craft-catalog/hydro-jetting"       },
-      { label: "Main Sewer Lines",         href: "/craft-catalog/main-sewer-lines"    },
-      { label: "Drain Snaking & Augering", href: "/craft-catalog/drain-snaking"       },
-      { label: "Multi-Unit Buildings",     href: "/craft-catalog/multi-unit-buildings"},
+      { label: "Electrical Wiring & New Circuits", href: "/craft-catalog/electrical-wiring"    },
+      { label: "Circuit Breaker Repair",           href: "/craft-catalog/circuit-breaker-repair" },
+      { label: "Lighting Installation",            href: "/craft-catalog/lighting-installation" },
+      { label: "Panel Upgrades & Replacements",    href: "/craft-catalog/panel-upgrades"        },
     ],
   },
 
-  /* ─── MULTI-UNIT & COMMERCIAL BUILDINGS ────────────────────────────────── */
-  "multi-unit-buildings": {
-    title: "Multi-Unit & Commercial Buildings",
+  "ac-heating-circuits": {
+    title: "A/C, Heating & Boiler Wiring",
     bgColor: "#101d2b",
     navItems: [
-      { href: "#overview",          label: "Overview"         },
-      { href: "#when_you_need_it",  label: "When You Need It" },
-      { href: "#our_process",       label: "Our Process"      },
-      { href: "#related_services",  label: "Related Services" },
+      { href: "#overview",         label: "Overview"         },
+      { href: "#when_you_need_it", label: "When You Need It" },
+      { href: "#our_process",      label: "Our Process"      },
+      { href: "#related_services", label: "Related Services" },
     ],
     overviewContent: (
       <>
         <p>
-          Pipe Monkeys works with brownstones, pre-war walk-ups, condos, co-ops,
-          and multi-family buildings across Brooklyn and Queens every day. Stack
-          drain issues, shared main lines, and building-wide backups are all in
-          our wheelhouse — and we know how to coordinate the job without creating
-          chaos for tenants.
+          Air conditioners, heating systems, boilers, and mini-splits all require
+          dedicated electrical circuits and proper wiring to run safely and
+          efficiently. Undersized wiring or shared circuits cause tripping breakers,
+          reduced performance, and can shorten equipment life.
         </p>
         <p>
-          Building managers and landlords: we show up on time, work efficiently,
-          and document the work. Call us directly at{" "}
-          <a href="tel:7187491830">(718) 749-1830</a>.
+          New York City Electricians wires new HVAC equipment installs and upgrades
+          existing circuits across all five boroughs, for residential and commercial
+          systems.
         </p>
       </>
     ),
     overviewQuickLinks: [
-      { label: "Call (718) 749-1830", href: "tel:7187491830" },
+      { label: "Call (646) 340-9882", href: "tel:6463409882" },
       { label: "Contact Us Online",   href: "/contact-us"    },
     ],
     sections: [
       {
         id: "when_you_need_it",
-        heading: "When Do You Need Multi-Unit Drain Service?",
+        heading: "When Do You Need HVAC Electrical Work?",
         content: (
           <>
             <p>
-              A building-wide backup — multiple units complaining of slow drains or
-              sewage odors simultaneously — almost always points to the main building
-              drain or the stack serving multiple floors. Individual unit clogs are
-              more straightforward; building-wide problems require more diagnostic
-              work to pinpoint whether the issue is in a branch line, the main stack,
-              or the building sewer itself.
+              Any time HVAC equipment is installed, replaced, or upgraded — the
+              electrical side needs to be properly sized and permitted. Common
+              scenarios: installing central A/C for the first time, replacing a
+              boiler or furnace, adding a mini-split system, or upgrading a window
+              A/C circuit that keeps tripping.
             </p>
             <p>
-              We handle both. Whether it&rsquo;s a single-apartment drain or a main
-              line serving a six-unit brownstone, we bring the right equipment and
-              take the time to find the actual source of the problem.
+              We also handle boiler wiring for oil and gas systems, thermostat
+              wiring, and control panel connections for heating systems.
             </p>
           </>
         ),
@@ -678,35 +569,285 @@ export const servicePages: Record<string, ServicePageData> = {
         content: (
           <>
             <p>
-              <strong>Step 1 — Coordinate with Management.</strong> We work directly
-              with the building manager or owner to understand which units are affected
-              and minimize disruption. If access to multiple units is needed, we schedule
-              efficiently.
+              <strong>Step 1 — Assess Load Requirements.</strong> We confirm the
+              amperage and voltage requirements for the equipment and verify panel
+              capacity can support the new circuit.
             </p>
             <p>
-              <strong>Step 2 — Diagnose the Root Cause.</strong> Building-wide symptoms
-              need root-cause diagnosis — we don&rsquo;t just snake the nearest drain.
-              Camera inspection is often recommended to locate the exact blockage in
-              the stack or main building drain.
+              <strong>Step 2 — Permit &amp; Quote.</strong> All HVAC wiring that
+              requires a permit gets one. Price confirmed before work starts.
             </p>
             <p>
-              <strong>Step 3 — Quote Upfront.</strong> Clear price before we start.
-              For complex jobs, we scope the work and confirm before proceeding.
+              <strong>Step 3 — Wire the Circuit.</strong> We run the dedicated
+              circuit from the panel to the equipment, install the disconnect box
+              where required, and make all connections.
             </p>
             <p>
-              <strong>Step 4 — Clear and Confirm.</strong> We use the right tool for
-              the blockage type — snake, industrial cutter, or hydro jet — confirm full
-              flow on all affected units, and document the work completed.
+              <strong>Step 4 — Test &amp; Inspect.</strong> Circuit tested under
+              load with the equipment running. Inspection scheduled and passed
+              where required.
             </p>
           </>
         ),
       },
     ],
     relatedServices: [
-      { label: "Camera Inspection",        href: "/craft-catalog/camera-inspection" },
-      { label: "Hydro Jetting",            href: "/craft-catalog/hydro-jetting"     },
-      { label: "Main Sewer Lines",         href: "/craft-catalog/main-sewer-lines"  },
-      { label: "Drain Snaking & Augering", href: "/craft-catalog/drain-snaking"     },
+      { label: "Panel Upgrades & Replacements",    href: "/craft-catalog/panel-upgrades"          },
+      { label: "Electrical Wiring & New Circuits", href: "/craft-catalog/electrical-wiring"       },
+      { label: "Circuit Breaker Repair",           href: "/craft-catalog/circuit-breaker-repair"  },
+      { label: "EV Charger Installation",          href: "/craft-catalog/ev-charger-installation" },
+    ],
+  },
+
+  "appliance-installation": {
+    title: "Appliance Installation & Fan Services",
+    bgColor: "#101d2b",
+    navItems: [
+      { href: "#overview",         label: "Overview"         },
+      { href: "#when_you_need_it", label: "When You Need It" },
+      { href: "#our_process",      label: "Our Process"      },
+      { href: "#related_services", label: "Related Services" },
+    ],
+    overviewContent: (
+      <>
+        <p>
+          Installing a new appliance or ceiling fan sounds simple until you realize
+          the wiring isn&rsquo;t adequate, the box isn&rsquo;t fan-rated, or the
+          circuit isn&rsquo;t dedicated. Getting it wrong is a fire hazard and a
+          code violation.
+        </p>
+        <p>
+          New York City Electricians handles proper appliance installation wiring
+          and all fan services — including ceiling fan installation, fan repair,
+          and ceiling fan-to-light conversions — across all five boroughs.
+        </p>
+      </>
+    ),
+    overviewQuickLinks: [
+      { label: "Call (646) 340-9882", href: "tel:6463409882" },
+      { label: "Contact Us Online",   href: "/contact-us"    },
+    ],
+    sections: [
+      {
+        id: "when_you_need_it",
+        heading: "What Falls Under This Service?",
+        content: (
+          <>
+            <p>
+              We handle wiring and connection for: dishwashers, ranges and cooktops,
+              over-the-range microwaves, garbage disposals, washer and dryer circuits,
+              and any appliance that needs a hardwired or dedicated circuit connection.
+            </p>
+            <p>
+              For fans: ceiling fan installation (including where no existing fixture
+              exists), fan motor repair, and replacing a light fixture with a
+              fan-rated box and ceiling fan. We&rsquo;ll confirm the box is properly
+              rated for the fan weight before any mounting.
+            </p>
+          </>
+        ),
+      },
+      {
+        id: "our_process",
+        heading: "How We Handle It",
+        content: (
+          <>
+            <p>
+              <strong>Step 1 — Assess.</strong> We confirm the existing wiring,
+              box, and circuit capacity are appropriate for the installation.
+            </p>
+            <p>
+              <strong>Step 2 — Quote Upfront.</strong> Any additional work is
+              explained and priced before we proceed.
+            </p>
+            <p>
+              <strong>Step 3 — Install.</strong> We complete the installation or
+              repair — including any required circuit or mounting upgrades — to code.
+            </p>
+            <p>
+              <strong>Step 4 — Test.</strong> Appliances confirmed working. Fans
+              tested for balance and switch function before we leave.
+            </p>
+          </>
+        ),
+      },
+    ],
+    relatedServices: [
+      { label: "Lighting Installation",           href: "/craft-catalog/lighting-installation" },
+      { label: "Electrical Wiring & New Circuits", href: "/craft-catalog/electrical-wiring"    },
+      { label: "GFCI Outlets & New Outlets",       href: "/craft-catalog/gfci-outlets"         },
+      { label: "A/C, Heating & Boiler Wiring",     href: "/craft-catalog/ac-heating-circuits"  },
+    ],
+  },
+
+  "home-safety-systems": {
+    title: "Safety & Alarm Systems",
+    bgColor: "#101d2b",
+    navItems: [
+      { href: "#overview",         label: "Overview"         },
+      { href: "#when_you_need_it", label: "When You Need It" },
+      { href: "#our_process",      label: "Our Process"      },
+      { href: "#related_services", label: "Related Services" },
+    ],
+    overviewContent: (
+      <>
+        <p>
+          Smoke detectors, general alarm systems, and lightning protection all
+          require proper electrical connections to function reliably when it matters
+          most. Hardwired systems are more reliable than battery-only devices —
+          and often required by NYC building code.
+        </p>
+        <p>
+          New York City Electricians installs and replaces smoke detectors, general
+          alarm systems, and lightning protection systems in residential and
+          commercial buildings across all five boroughs.
+        </p>
+      </>
+    ),
+    overviewQuickLinks: [
+      { label: "Call (646) 340-9882", href: "tel:6463409882" },
+      { label: "Contact Us Online",   href: "/contact-us"    },
+    ],
+    sections: [
+      {
+        id: "when_you_need_it",
+        heading: "When Do You Need Safety System Work?",
+        content: (
+          <>
+            <p>
+              NYC requires working smoke detectors on every level of a home, and
+              carbon monoxide detectors near sleeping areas. If yours are over 10
+              years old, chirping, or were never hardwired, it&rsquo;s time to
+              replace them. We install interconnected hardwired systems so when
+              one alarm sounds, they all sound.
+            </p>
+            <p>
+              For general alarm systems and lightning protection: new installs,
+              replacements, and troubleshooting of existing systems. If you have
+              commercial emergency lighting or exit signs that need inspection or
+              replacement, we handle those as well.
+            </p>
+          </>
+        ),
+      },
+      {
+        id: "our_process",
+        heading: "How We Handle It",
+        content: (
+          <>
+            <p>
+              <strong>Step 1 — Assess Your Current Setup.</strong> We confirm what
+              you have, what code requires for your building type, and what needs
+              to change.
+            </p>
+            <p>
+              <strong>Step 2 — Quote Upfront.</strong> Full price before work
+              begins, including any wiring additions required.
+            </p>
+            <p>
+              <strong>Step 3 — Install.</strong> We mount and wire all devices
+              properly, connect to the appropriate circuits, and ensure all
+              interconnections are functioning.
+            </p>
+            <p>
+              <strong>Step 4 — Test.</strong> We trigger and test every device
+              before leaving — you see it working before we close the job.
+            </p>
+          </>
+        ),
+      },
+    ],
+    relatedServices: [
+      { label: "Lighting Installation",           href: "/craft-catalog/lighting-installation" },
+      { label: "Electrical Wiring & New Circuits", href: "/craft-catalog/electrical-wiring"    },
+      { label: "GFCI Outlets & New Outlets",       href: "/craft-catalog/gfci-outlets"         },
+      { label: "Panel Upgrades & Replacements",    href: "/craft-catalog/panel-upgrades"       },
+    ],
+  },
+
+  "solar-panel-maintenance": {
+    title: "Solar Panel Maintenance",
+    bgColor: "#101d2b",
+    navItems: [
+      { href: "#overview",         label: "Overview"         },
+      { href: "#when_you_need_it", label: "When You Need It" },
+      { href: "#our_process",      label: "Our Process"      },
+      { href: "#related_services", label: "Related Services" },
+    ],
+    overviewContent: (
+      <>
+        <p>
+          Solar installations in New York City face unique challenges — limited
+          roof space, older buildings, and the complexity of connecting to the
+          Con Edison grid. Maintaining that system properly means the electrical
+          connections, inverters, and disconnect switches all stay in safe working
+          order.
+        </p>
+        <p>
+          New York City Electricians provides solar panel maintenance and electrical
+          system checks for residential and commercial solar installations across
+          all five boroughs.
+        </p>
+      </>
+    ),
+    overviewQuickLinks: [
+      { label: "Call (646) 340-9882", href: "tel:6463409882" },
+      { label: "Contact Us Online",   href: "/contact-us"    },
+    ],
+    sections: [
+      {
+        id: "when_you_need_it",
+        heading: "When Do You Need Solar Electrical Maintenance?",
+        content: (
+          <>
+            <p>
+              If your solar system is producing less power than expected, a breaker
+              on the solar circuit is tripping, the inverter is showing a fault code,
+              or it&rsquo;s been more than a year since anyone checked the electrical
+              connections — it&rsquo;s time for a maintenance visit.
+            </p>
+            <p>
+              We also help when homeowners are doing a panel upgrade and need the
+              solar disconnect properly integrated into the new panel, or when a
+              system was installed by a company that is no longer available for
+              service.
+            </p>
+          </>
+        ),
+      },
+      {
+        id: "our_process",
+        heading: "How We Handle It",
+        content: (
+          <>
+            <p>
+              <strong>Step 1 — System Assessment.</strong> We inspect the electrical
+              connections, disconnect switch, inverter, and panel integration to
+              identify any faults or degraded components.
+            </p>
+            <p>
+              <strong>Step 2 — Quote Upfront.</strong> We explain what we found
+              and what the repair or maintenance will cost before proceeding.
+            </p>
+            <p>
+              <strong>Step 3 — Service.</strong> We repair or replace faulty
+              electrical components, tighten connections, and confirm the system
+              is producing correctly.
+            </p>
+            <p>
+              <strong>Step 4 — Test &amp; Document.</strong> We verify output and
+              confirm the system is operating within expected parameters before
+              closing the job.
+            </p>
+          </>
+        ),
+      },
+    ],
+    relatedServices: [
+      { label: "Panel Upgrades & Replacements",    href: "/craft-catalog/panel-upgrades"          },
+      { label: "EV Charger Installation",          href: "/craft-catalog/ev-charger-installation" },
+      { label: "Electrical Wiring & New Circuits", href: "/craft-catalog/electrical-wiring"       },
+      { label: "Circuit Breaker Repair",           href: "/craft-catalog/circuit-breaker-repair"  },
     ],
   },
 };

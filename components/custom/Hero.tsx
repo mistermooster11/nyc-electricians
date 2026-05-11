@@ -27,7 +27,7 @@ export default function Hero() {
               visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-full',
             ].join(' ')}
           >
-            Brooklyn, Queens &amp; Nassau County Drain Clearing
+            NYC&rsquo;s Licensed Electricians &mdash; Residential &amp; Commercial
           </h1>
 
           <div className="flex justify-start pb-20 max-[767px]:block max-[767px]:pb-8">
@@ -41,15 +41,15 @@ export default function Hero() {
               ].join(' ')}
             >
               <p className="text-[1.9rem] leading-[1.6]">
-                From sinks to main lines, we clear tough clogs across Brooklyn,
-                Queens and Nassau County with pro gear and zero stress.
-                Upfront pricing. Family owned. Local NYC techs.
+                Panel upgrades, EV charger installs, wiring, and 24-hour emergency
+                service across all five boroughs. Licensed, insured, and upfront
+                on pricing — every time.
               </p>
             </div>
 
             <PrimaryButton
-              label="Call (718) 749-1830"
-              href="tel:7187491830"
+              label="Call (646) 340-9882"
+              href="tel:6463409882"
               dark
               wow
               visible={visible}
@@ -108,7 +108,7 @@ export default function Hero() {
                   visible ? 'h-full scale-100' : 'h-0 scale-[1.2]',
                 ].join(' ')}
               >
-                {/* TODO: Replace src with a Pipe Monkeys hero image or video */}
+                {/* TODO: Replace with NYC Electricians hero image or video */}
                 <video
                   loop
                   autoPlay

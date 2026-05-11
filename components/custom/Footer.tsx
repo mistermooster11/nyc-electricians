@@ -4,16 +4,20 @@ import { useRef } from "react";
 import { useInView } from "framer-motion";
 
 const quickLinks = [
-  { label: "Our Services",               href: "/craft-catalog",   external: false },
-  { label: "Frequently Asked Questions", href: "/general-faqs",    external: false },
-  { label: "Service Areas",              href: "/service-areas",   external: false },
-  { label: "Before & After Gallery",     href: "/gallery",         external: false },
-  { label: "Contact Us",                 href: "/contact-us",      external: false },
+  { label: "Our Services",               href: "/craft-catalog",  external: false },
+  { label: "Frequently Asked Questions", href: "/general-faqs",   external: false },
+  { label: "Service Areas",              href: "/service-areas",  external: false },
+  { label: "Before & After Gallery",     href: "/gallery",        external: false },
+  { label: "Contact Us",                 href: "/contact-us",     external: false },
 ];
 
-const socials = [
-  { icon: "icon-facebook",   href: "https://www.facebook.com/pipemonkeys",  label: "Facebook"  },
-  { icon: "icon-instagram",  href: "https://www.instagram.com/pipemonkeys", label: "Instagram" },
+// Social icon type — explicitly typed to avoid implicit any[]
+type SocialLink = { icon: string; href: string; label: string };
+
+const socials: SocialLink[] = [
+  { icon: "icon-facebook",  href: "https://www.facebook.com/284236588450919",               label: "Facebook"  },
+  { icon: "icon-instagram", href: "https://www.instagram.com/newyorkcityelectricians/",      label: "Instagram" },
+  { icon: "icon-yelp",      href: "https://www.yelp.com/biz/new-york-city-electricians-new-york", label: "Yelp" },
 ];
 
 export default function Footer() {
@@ -30,11 +34,11 @@ export default function Footer() {
         {/* Logo */}
         <div className={`footer__logo fadeInUpS wow${vis}`}>
           <a href="/">
-            <span className="sr-only">Pipe Monkeys</span>
-            {/* [TODO: Replace with Pipe Monkeys logo] */}
+            <span className="sr-only">New York City Electricians</span>
+            {/* [TODO: Replace with NYC Electricians logo] */}
             <img
               src="/logos/logo-long.svg"
-              alt="Pipe Monkeys Drain & Sewer"
+              alt="New York City Electricians"
               width="220"
               height="48"
             />
@@ -66,14 +70,13 @@ export default function Footer() {
             <h3 className="footer__heading">Contact Us</h3>
             <div className="content-entry">
               <p>
-                <strong>(718) 749-1830</strong><br />
-                Brooklyn, Queens &amp; Nassau County<br />
-                {/* [TODO: Add business hours] */}
-                Mon–Sat: 7am–8pm &bull; Sun: Emergency Only
+                <strong>(646) 340-9882</strong><br />
+                50 Saint Marks Place, New York, NY 10003<br />
+                24-Hour Emergency Service Available
               </p>
             </div>
             <a
-              href="tel:7187491830"
+              href="tel:6463409882"
               className={`ia-link ia-link--arrow ia-link--white wow${vis}`}
             >
               <i className="icon-arrow-right ia-orange" />
@@ -89,9 +92,9 @@ export default function Footer() {
             <h3 className="footer__heading">Service Areas</h3>
             <div className="content-entry">
               <p>
-                Brooklyn &bull; Queens &bull; Nassau County<br />
-                All neighborhoods — if you&apos;re not sure,
-                just call. We almost certainly cover your area.
+                Manhattan &bull; Brooklyn &bull; Queens<br />
+                Bronx &bull; Staten Island<br />
+                All five boroughs — residential &amp; commercial.
               </p>
             </div>
             <a
@@ -111,7 +114,7 @@ export default function Footer() {
         <div className={`footer__bottom cleared fadeInUpS wow${vis}`}>
 
           <div className="footer__bottom__left">
-            &copy;2026 Pipe Monkeys. All rights reserved.
+            &copy;2026 New York City Electricians. All rights reserved.
           </div>
 
           <div className="footer__bottom__center">

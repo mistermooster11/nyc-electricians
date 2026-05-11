@@ -12,94 +12,106 @@ interface FaqItem {
 
 const faqItems: FaqItem[] = [
   {
-    title: "How quickly can you get here?",
+    title: "How quickly can you respond to an electrical issue?",
     content: (
       <p>
-        Most calls are scheduled the same day, and we offer near-instant
-        response for urgent clogs. Timing depends on your exact neighborhood,
-        but we move fast. Call us at{" "}
-        <a href="tel:7187491830" className="ia-link">(718) 749-1830</a>{" "}
-        and we&apos;ll give you an accurate ETA on the spot.
+        We offer 24-hour emergency service across all five boroughs. For non-emergency
+        work, most jobs are scheduled the same day or next day. Call us at{" "}
+        <a href="tel:6463409882" className="ia-link">(646) 340-9882</a>{" "}
+        and we&apos;ll give you an accurate timeframe on the spot.
       </p>
+    ),
+  },
+  {
+    title: "Are your electricians licensed and insured in New York City?",
+    content: (
+      <p>
+        Yes. Every technician on our team is fully licensed and insured to work in
+        New York City. We carry general liability insurance and comply with all NYC
+        Department of Buildings requirements. We pull permits on every qualifying job
+        and make sure all work meets current electrical codes.
+      </p>
+    ),
+  },
+  {
+    title: "Do you pull permits for electrical work?",
+    content: (
+      <p>
+        Always, when required. Panel upgrades, new circuits, EV charger installs,
+        and other qualifying work require permits in NYC — we handle the application,
+        coordination with the DOB, and scheduling the final inspection. You never
+        have to chase down a permit yourself.
+      </p>
+    ),
+  },
+  {
+    title: "How do I know if I need a panel upgrade?",
+    content: (
+      <p>
+        The most common signs: breakers that trip repeatedly, flickering lights when
+        appliances run, an inability to add new circuits, a fuse box instead of a
+        breaker panel, or an insurance company flagging your electrical system. If
+        you&apos;re adding an EV charger, central A/C, or finishing a basement, a
+        panel upgrade is almost always part of that process.
+      </p>
+    ),
+  },
+  {
+    title: "What areas of New York City do you serve?",
+    content: (
+      <>
+        <p>We serve all five boroughs, including:</p>
+        <p>
+          <strong>Manhattan:</strong> Upper East Side, Upper West Side, Midtown,
+          Chelsea, the Village, SoHo, Tribeca, Lower Manhattan, Harlem, Washington
+          Heights and more.
+        </p>
+        <p>
+          <strong>Brooklyn:</strong> Williamsburg, Park Slope, Bed-Stuy, Crown
+          Heights, Bay Ridge, Flatbush, Bensonhurst, Greenpoint, DUMBO and more.
+        </p>
+        <p>
+          <strong>Queens:</strong> Astoria, LIC, Flushing, Forest Hills, Bayside,
+          Jackson Heights, Rego Park, Jamaica and more.
+        </p>
+        <p>
+          <strong>Bronx &amp; Staten Island:</strong> All neighborhoods — if you&apos;re
+          not sure, just call. We almost certainly cover your area.
+        </p>
+      </>
     ),
   },
   {
     title: "Do you give upfront pricing?",
     content: (
       <p>
-        Always. We diagnose the issue, explain the solution, and give you the
-        price before any work starts. No surprises, no upsell games. What we
+        Always. We assess the job, explain what needs to happen, and give you a clear
+        price before any work begins. No surprise invoices, no upsell games. What we
         quote is what you pay — period.
       </p>
     ),
   },
   {
-    title: "What tools do you use to clear drains?",
+    title: "Can you work in older NYC buildings with outdated wiring?",
     content: (
       <p>
-        We carry professional cutters, snakes, augers, and hydro-jetting
-        equipment on every truck. Your tech will choose the safest and most
-        effective method for your specific line and problem — and explain why
-        before starting.
+        Yes — this is a significant part of what we do. Pre-war buildings in New York
+        City often have knob-and-tube wiring, undersized service, and non-standard
+        configurations. Our team has over 40 years of experience working in these
+        buildings safely. We&apos;ll assess what you have, explain your options
+        honestly, and work in finished spaces with minimal disruption wherever possible.
       </p>
     ),
   },
   {
-    title: "When should I consider hydro jetting instead of snaking?",
+    title: "What should I do if my power goes out or I have a dangerous electrical issue?",
     content: (
       <p>
-        Snaking clears a path through the clog. Jetting actually scrubs grease,
-        scale, and buildup off the pipe walls — giving you a cleaner line and
-        much longer-lasting results. If you get repeat clogs in the same drain,
-        jetting is usually the right call. We&apos;ll tell you honestly which
-        one makes sense for your situation.
-      </p>
-    ),
-  },
-  {
-    title: "Do you service apartments and multi-unit buildings?",
-    content: (
-      <p>
-        All the time. We work with brownstones, pre-war buildings, walk-ups,
-        condos, co-ops, and multi-family homes across Brooklyn, Queens, and
-        Nassau County every day. We coordinate with building managers and work
-        to minimize disruption to other tenants.
-      </p>
-    ),
-  },
-  {
-    title: "What areas do you serve?",
-    content: (
-      <>
-        <p>We serve all of Brooklyn, Queens, and Nassau County including:</p>
-        <p>
-          <strong>Brooklyn:</strong> Williamsburg, Greenpoint, Bushwick,
-          Bed-Stuy, Crown Heights, Park Slope, Sunset Park, Bay Ridge,
-          Bensonhurst, Dyker Heights, Gravesend, Sheepshead Bay, Coney Island
-          and more.
-        </p>
-        <p>
-          <strong>Queens:</strong> Astoria, LIC, Maspeth, Flushing, Whitestone,
-          Bayside, Forest Hills, Rego Park, Jackson Heights, Elmhurst, Middle
-          Village and more.
-        </p>
-        <p>
-          <strong>Nassau County:</strong> Valley Stream, Elmont, Franklin
-          Square, West Hempstead, Hempstead, Garden City, Mineola, New Hyde
-          Park, Rockville Centre, Oceanside, Freeport, Merrick, Bellmore,
-          Levittown, East Meadow and more.
-        </p>
-      </>
-    ),
-  },
-  {
-    title: "Do you clean up after the job?",
-    content: (
-      <p>
-        Yes — always. Every tech wears shoe covers, lays down drop cloths, and
-        cleans the workspace before leaving. We test the flow, show you the
-        results, and make sure your home is cleaner than we found it. That
-        &apos;s not a bonus — it&apos;s standard.
+        Call us immediately at{" "}
+        <a href="tel:6463409882" className="ia-link">(646) 340-9882</a>. We provide
+        24-hour emergency service. If you smell burning, see sparks, or have reason
+        to believe there&apos;s a dangerous wiring fault — don&apos;t wait. Turn off
+        the relevant breaker if you can do so safely, and call us right away.
       </p>
     ),
   },
@@ -197,7 +209,7 @@ export default function GeneralFaqsPage() {
             <div className={`front-donation__in wow fadeInUpS${donationInView ? " is-visible" : ""}`} style={{ animationDelay: "0.2s" }}>
               <div className="content-entry">
                 <p>
-                  Call us at <strong>(718) 749-1830</strong> — our team picks up fast
+                  Call us at <strong>(646) 340-9882</strong> — our team picks up fast
                   and can answer any question, schedule a same-day visit, or give you
                   an honest assessment over the phone.
                 </p>
@@ -205,8 +217,8 @@ export default function GeneralFaqsPage() {
               <div className="front-donation__btn-wrap">
                 <div className="front-donation__btn">
                   <SecondaryButton
-                    label="Call (718) 749-1830"
-                    href="tel:7187491830"
+                    label="Call (646) 340-9882"
+                    href="tel:6463409882"
                   />
                 </div>
               </div>

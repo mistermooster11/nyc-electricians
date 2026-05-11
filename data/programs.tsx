@@ -34,17 +34,17 @@ export type ProgramsPageData = {
 export const programsData: ProgramsPageData = {
   navItems: [
     { href: "#flex-module-3", label: "Service Details" },
-    { href: "#flex-module-4", label: "Service Areas"  },
+    { href: "#flex-module-4", label: "Service Areas"   },
   ],
 
   hero: {
-    bgImage: "/images/IMG_9750-1024x683.jpg",
+    bgImage: "https://img1.wsimg.com/isteam/ip/89e3a28a-1623-450e-a04f-089dccc30b1d/fm%3Df_eN91pW.jpg",
     title: "Our Services",
     description: (
       <p>
-        Pipe Monkeys handles every type of drain and sewer issue across
-        Brooklyn, Queens, and Nassau County — from a slow kitchen sink to a
-        fully blocked main line.
+        New York City Electricians handles every type of residential and commercial
+        electrical work across all five boroughs — from panel upgrades and EV charger
+        installs to rewires and 24-hour emergency repairs.
       </p>
     ),
     breadcrumbParentLabel: "Services",
@@ -55,17 +55,17 @@ export const programsData: ProgramsPageData = {
     content: (
       <>
         <p>
-          Every job starts the same way: we diagnose the problem, explain the
-          solution in plain language, and give you the price before any work
-          begins. Our techs carry professional-grade cutters, snakes, augers,
-          and hydro-jetting equipment — so whatever the line throws at us,
-          we&rsquo;re ready.
+          Every job starts the same way: we assess the issue, explain exactly what
+          needs to happen, and give you a clear price before any work begins. Our
+          licensed electricians carry the right tools and parts to handle most jobs
+          in a single visit — no repeat trips, no runaround.
         </p>
         <p>
-          We work in residential homes, brownstones, pre-war walk-ups, condos,
-          and multi-family buildings. Same-day scheduling available. Near-instant
-          response for emergencies. Call{" "}
-          <a href="tel:7187491830">(718) 749-1830</a> to get started.
+          We work in pre-war apartments, brownstones, new construction, retail
+          spaces, and commercial buildings across Manhattan, Brooklyn, Queens, the
+          Bronx, and Staten Island. Same-day service available. 24-hour emergency
+          response. Call{" "}
+          <a href="tel:6463409882">(646) 340-9882</a> to get started.
         </p>
       </>
     ),
@@ -76,101 +76,137 @@ export const programsData: ProgramsPageData = {
 
   programs: [
     {
-      title: "Main Sewer Line Clearing",
+      title: "Panel Upgrades & Replacements",
       content: (
         <p>
-          Roots, scale, grease buildup, and heavy blockages in the main line
-          require pro-level equipment — not a standard snake from the hardware
-          store. Our techs use industrial cutters and jetting to restore full
-          flow to your main sewer line and confirm it before leaving. We handle
-          this every day in Brooklyn brownstones, Queens multi-families, and
-          Nassau County homes with long sewer runs.
+          Older NYC homes with 60- or 100-amp panels can&rsquo;t support modern
+          appliances, EV chargers, or central A/C safely. We upgrade to 200-amp
+          service across all five boroughs — pulling all permits, handling the
+          Con Edison coordination, and passing final inspection before we close the
+          job. Panel change-outs and full replacements included.
         </p>
       ),
-      learnMoreHref: "/craft-catalog/main-sewer-lines",
+      learnMoreHref: "/craft-catalog/panel-upgrades",
     },
     {
-      title: "Kitchen Sink Drain Clearing",
+      title: "EV Charger Installation",
       content: (
         <p>
-          Grease, food debris, and soap scum are the most common kitchen culprits
-          — and they build up fast in NYC buildings with heavy daily use. We
-          clear kitchen drains using professional cutters and hydro jetting
-          depending on the severity, leaving the line fully open and grease-free.
-          No mess, no damage to pipes, and no recurring clogs if you go with
-          jetting.
+          A Level 2 EV charger requires a dedicated 240V circuit and a panel that
+          can handle the load. We assess your panel, run the circuit, install the
+          NEMA 14-50 outlet or hardwired charger unit, and handle all permits
+          — residential homes, garages, and commercial parking facilities across
+          the five boroughs.
         </p>
       ),
-      learnMoreHref: "/craft-catalog/kitchen-sinks",
+      learnMoreHref: "/craft-catalog/ev-charger-installation",
     },
     {
-      title: "Tub & Shower Drain Clearing",
+      title: "Electrical Wiring & New Circuits",
       content: (
         <p>
-          Hair, soap buildup, and mineral deposits accumulate silently until
-          you&rsquo;re standing in ankle-deep water. Our techs remove the
-          blockage cleanly — no torn-up tile, no chemical damage to pipes — and
-          leave the bathroom exactly as they found it. Shoe covers and drop
-          cloths every time.
+          From new circuits for a home office or appliance to full rewires of
+          pre-war buildings with knob-and-tube or aluminum wiring — we handle
+          all residential and commercial wiring work. Includes new outlets and
+          switches, electrical relocation, and upgrades to existing systems flagged
+          by inspectors. All work done to NEC code with permits pulled and inspections
+          passed.
         </p>
       ),
-      learnMoreHref: "/craft-catalog/tubs-and-showers",
+      learnMoreHref: "/craft-catalog/electrical-wiring",
     },
     {
-      title: "Toilet Clog Clearing",
+      title: "Lighting Installation",
       content: (
         <p>
-          Stubborn toilet clogs — including foreign objects, excessive paper,
-          and hard-to-reach blockages — are cleared fast with the right auger
-          and technique. We&rsquo;ve retrieved everything from children&rsquo;s
-          toys to full pipe obstructions. No splash, no stress, and we test the
-          flush before we leave.
+          Ceiling fans, recessed lighting, pendant fixtures, landscape and security
+          lights, and commercial emergency lights and exit signs — we install,
+          replace, and wire all types of lighting across residential and commercial
+          properties. Dimmer switches, smart controls, and outdoor motion-sensor
+          lights included.
         </p>
       ),
-      learnMoreHref: "/craft-catalog/toilets",
+      learnMoreHref: "/craft-catalog/lighting-installation",
     },
     {
-      title: "Hydro Jetting",
+      title: "Circuit Breaker Repair",
       content: (
         <p>
-          Snaking clears a path through the clog. Hydro jetting actually scrubs
-          grease, scale, and buildup off the pipe walls — giving you a like-new
-          interior and dramatically reducing repeat clogs. If you&rsquo;ve been
-          dealing with the same drain backing up every few months, jetting is
-          the long-term fix. Available for kitchen lines, main sewer lines, and
-          commercial buildings.
+          Tripping breakers, flickering lights, blown fuses, and buzzing panels
+          are symptoms of underlying electrical problems. We diagnose the root cause
+          first — not just the symptom — and replace faulty breakers, rebalance
+          overloaded circuits, or recommend a panel upgrade when that&rsquo;s what
+          the situation actually requires.
         </p>
       ),
-      learnMoreHref: "/craft-catalog/hydro-jetting",
+      learnMoreHref: "/craft-catalog/circuit-breaker-repair",
     },
     {
-      title: "Camera Inspection",
+      title: "GFCI Outlets & New Outlets",
       content: (
         <p>
-          Before we recommend a repair or jetting service on your main line, we
-          can run a camera to show you exactly what&rsquo;s in there — root
-          intrusion, pipe damage, grease buildup, or collapsed sections. You see
-          what we see, in real time, so there&rsquo;s no guesswork and no
-          upselling on work you don&rsquo;t need.
+          GFCI outlets are code-required in kitchens, bathrooms, garages, and
+          outdoor locations — missing ones are a common inspection failure. We
+          install and replace GFCI outlets, standard outlets, and switches in any
+          location, and can add new outlets throughout a renovation or finished
+          space in a single visit.
         </p>
       ),
-      learnMoreHref: "/craft-catalog/camera-inspection",
+      learnMoreHref: "/craft-catalog/gfci-outlets",
     },
     {
-      title: "Multi-Unit & Commercial Buildings",
+      title: "A/C, Heating & Boiler Wiring",
       content: (
         <p>
-          We work with brownstones, pre-war walk-ups, condos, co-ops, and
-          multi-family buildings across Brooklyn and Queens every single day.
-          Stack drain issues, shared main lines, and building-wide backups are
-          all in our wheelhouse. We coordinate with building managers and
-          minimize disruption to tenants throughout the job.
+          HVAC equipment requires dedicated, properly sized electrical circuits to
+          run safely and efficiently. We wire new A/C installs, boilers, furnaces,
+          and mini-split systems — and upgrade existing circuits that aren&rsquo;t
+          sized adequately for the load. Includes thermostat wiring and heating
+          control panel connections.
         </p>
       ),
-      learnMoreHref: "/craft-catalog/multi-unit-buildings",
+      learnMoreHref: "/craft-catalog/ac-heating-circuits",
+    },
+    {
+      title: "Appliance Installation & Fan Services",
+      content: (
+        <p>
+          We handle the electrical side of appliance installations — dishwashers,
+          ranges, microwaves, garbage disposals, and washer/dryer circuits. For fans:
+          ceiling fan installation from scratch, fan motor repair, and replacing
+          existing light fixtures with fan-rated boxes and ceiling fans. Every
+          installation is confirmed working before we leave.
+        </p>
+      ),
+      learnMoreHref: "/craft-catalog/appliance-installation",
+    },
+    {
+      title: "Safety & Alarm Systems",
+      content: (
+        <p>
+          NYC building code requires working hardwired smoke detectors and CO
+          detectors in every residence. We install interconnected hardwired systems,
+          replace outdated or battery-only devices, and handle general alarm system
+          installs and lightning protection. Commercial emergency lighting and exit
+          sign replacements also available.
+        </p>
+      ),
+      learnMoreHref: "/craft-catalog/home-safety-systems",
+    },
+    {
+      title: "Solar Panel Maintenance",
+      content: (
+        <p>
+          We provide electrical maintenance for existing solar installations —
+          inspecting connections, inverters, and disconnect switches; diagnosing
+          underperforming systems; and integrating solar disconnects into upgraded
+          panels. If your original installer is no longer available for service,
+          we can take over and keep your system running safely.
+        </p>
+      ),
+      learnMoreHref: "/craft-catalog/solar-panel-maintenance",
     },
   ],
 
-  // No external partners — use service area neighborhoods instead
   partners: [],
 };

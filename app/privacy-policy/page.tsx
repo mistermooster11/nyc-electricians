@@ -43,7 +43,7 @@ export default function PrivacyPolicyPage() {
             </p>
 
             <p>
-              Pipe Monkeys (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;) operates this website
+              New York City Electricians (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;) operates this website
               and is committed to protecting your privacy. This Privacy Policy explains what information we
               collect, how we use it, and the choices you have regarding your information.
             </p>
@@ -54,7 +54,7 @@ export default function PrivacyPolicyPage() {
             </p>
             <ul>
               <li>Fill out our contact or service request form</li>
-              <li>Call us directly at (718) 749-1830</li>
+              <li>Call us directly at (646) 340-9882</li>
               <li>Send us an email</li>
             </ul>
             <p>
@@ -145,9 +145,9 @@ export default function PrivacyPolicyPage() {
               information, please contact us:
             </p>
             <p>
-              <strong>Pipe Monkeys</strong><br />
-              Brooklyn, Queens &amp; Nassau County, NY<br />
-              Phone: <a href="tel:7187491830">(718) 749-1830</a>
+              <strong>New York City Electricians</strong><br />
+              New York, NY 10003<br />
+              Phone: <a href="tel:6463409882">(646) 340-9882</a>
             </p>
 
           </div>
