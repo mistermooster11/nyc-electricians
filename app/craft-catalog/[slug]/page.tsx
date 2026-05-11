@@ -86,7 +86,7 @@ export default async function ServiceDetailPage({
                   <p>
                     <strong>Ready to book?</strong>{" "}
                     Call{" "}
-                    <a (href="tel:6463409882">(646) 340-9882</a>{" "}
+                    <a href="tel:6463409882">(646) 340-9882</a>{" "}
                     for same-day scheduling, or{" "}
                     <a href="/contact-us">send us a message online</a>.
                     We give you a price before we start — no surprises.
