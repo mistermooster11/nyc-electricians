@@ -46,7 +46,7 @@ export default function Announcements() {
                   display: 'block',
                   width: '100%',
                   height: '100%',
-                  backgroundColor: '#101d2b',
+                  backgroundColor: '#FFFFFF',
                 }}
               />
               {/* [TODO: Replace with NYC Electricians job site or team photo] */}
