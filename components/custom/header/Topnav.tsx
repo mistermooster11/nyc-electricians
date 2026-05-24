@@ -13,7 +13,6 @@ const Topnav = ({ onMobileMenuClick }: TopnavProps) => {
 
                 {/* Mobile logo */}
                 <Link href="/" className="block lg:hidden float-left" aria-label="New York City Electricians">
-                    {/* [TODO: Replace with NYC Electricians logo SVG] */}
                     <img src="/logos/logo-94.svg" alt="New York City Electricians" className="block h-[3.6rem]" />
                 </Link>
 
