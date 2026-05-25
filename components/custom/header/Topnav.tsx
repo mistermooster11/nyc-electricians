@@ -13,7 +13,7 @@ const Topnav = ({ onMobileMenuClick }: TopnavProps) => {
 
                 {/* Mobile logo */}
                 <Link href="/" className="block lg:hidden float-left" aria-label="New York City Electricians">
-                    <img src="/logos/logo-94.svg" alt="New York City Electricians" className="block h-[3.6rem]" />
+                    <img src="/logos/nyc Electricians-light-backgorund.png" alt="New York City Electricians" className="block h-[3.6rem]" />
                 </Link>
 
                 {/* Phone number — centered on desktop */}

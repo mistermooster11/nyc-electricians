@@ -174,10 +174,7 @@
 /* ─── CONTACT SECTION ───────────────────────────── */
 .contact-section {
   position: relative;
-  background-image: url("/images/title-bg.webp");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  background-color: #ffffff;
 }
 
 /* Dark overlay — same as cta-form */
@@ -202,7 +199,10 @@
 /* ── Left: info ── */
 .contact-section__info {
   padding: 60px 50px;
-  /* background-color: rgba(18, 28, 34, 0.55); */
+  background-image: url("/wp-assets/map-1.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .contact-section__eyebrow {

@@ -37,7 +37,7 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
         {/* .mobile-navi__head */}
         <div className="relative px-[2.4rem] py-[1rem] flex items-center min-h-[54px] border-b border-[rgba(140,188,255,.3)]">
           <Link href="/" onClick={onClose} aria-label="New York City Electricians">
-            <img src="/logos/logo-long.svg" alt="New York City Electricians" className="block h-[3.2rem]" />
+            <img src="/logos/nyc Electricians-light-backgorund.png" alt="New York City Electricians" className="block h-[3.2rem]" />
           </Link>
           {/* .mobile-navi__close */}
           <button

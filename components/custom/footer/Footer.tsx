@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="footer__brand">
           <Link href="/">
             <Image
-              src="/images/logo-image-50.png"
+              src="/logos/nyc Electricians_darkbackground.png"
               alt="New York City Electricians Logo"
               width={239}
               height={58}
