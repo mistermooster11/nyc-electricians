@@ -47,29 +47,23 @@ export default function TrustedLogos() {
         </h2>
         <div className="trusted__logos">
           <div className="trusted__logo-item">
-            <Image
-              src="/images/logos-restaurante-2.png"
-              alt="Restaurant Logo"
-              width={138}
-              height={80}
+            <img
+              src="/images/logo-coned.svg"
+              alt="Con Edison"
               style={{ height: "60px", width: "auto" }}
             />
           </div>
           <div className="trusted__logo-item">
-            <Image
-              src="/images/logo-joia-beach.png"
-              alt="Joia Beach Logo"
-              width={265}
-              height={80}
+            <img
+              src="/images/logo-elliman.svg"
+              alt="Douglas Elliman"
               style={{ height: "60px", width: "auto" }}
             />
           </div>
           <div className="trusted__logo-item">
-            <Image
-              src="/images/logos-restaurante-1.png"
-              alt="Restaurant Logo"
-              width={118}
-              height={78}
+            <img
+              src="/images/logo-corcoran.svg"
+              alt="The Corcoran Group"
               style={{ height: "60px", width: "auto" }}
             />
           </div>
